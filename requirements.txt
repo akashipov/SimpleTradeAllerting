@@ -1,0 +1,8 @@
+python_binance==1.0.15
+poetry==1.1.11
+ftx==1.0.2
+ciso8601=2.2.0
+pytest==6.2.5
+isort==5.9.3
+autopep8==1.6.0
+pyTelegramBotAPI==4.1.1
