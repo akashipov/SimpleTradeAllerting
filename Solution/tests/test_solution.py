@@ -1,5 +1,6 @@
-from solution import __version__
 import pytest
+
+from solution import __version__
 
 
 def test_version():

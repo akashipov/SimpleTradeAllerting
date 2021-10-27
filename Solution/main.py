@@ -1,14 +1,13 @@
 import asyncio
 from collections import deque
 
-from Solution.solution.config import load_config
-from Solution.solution.logic import (calculate, get_binance_orderbook,
-                                     get_ftx_orderbook)
+from solution.config.config import load_config
+from solution.logic import calculate, get_binance_orderbook, get_ftx_orderbook
 
 
 async def main():
-    binance_results = deque()
-    ftx_results = deque()
+    binance_results = deque(maxlen=1)
+    ftx_results = deque(maxlen=1)
     tasks = []
     config = load_config()
     tasks.append(asyncio.create_task(
