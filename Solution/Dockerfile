@@ -1,6 +1,6 @@
 FROM python:3.8-alpine
 WORKDIR /code
-RUN apk add --no-cache gcc musl-dev linux-headers libffi-dev openssl-dev rust cargo build-base
+RUN apk add --no-cache gcc musl-dev linux-headers libffi-dev openssl-dev rust cargo build-base vim
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip & pip install -r requirements.txt
 COPY . .
