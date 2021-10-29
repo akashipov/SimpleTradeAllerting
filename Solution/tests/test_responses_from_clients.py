@@ -15,16 +15,18 @@ def event_loop():
 
 def test_response_binance(event_loop):
     client = AsyncClient()
-    response = event_loop.run_until_complete(client.get_order_book(symbol="BTCUSDT"))
-    assert 'bids' in response
-    assert 'asks' in response
+    response = event_loop.run_until_complete(
+        client.get_order_book(symbol="BTCUSDT")
+    )
+    assert "bids" in response
+    assert "asks" in response
 
 
 def test_response_ftx():
     client = FtxClient()
     response = client.get_orderbook("BTC/USDT", 1)
-    assert 'bids' in response
-    assert 'asks' in response
+    assert "bids" in response
+    assert "asks" in response
 
 
 def test_response_glm_btc():
@@ -41,4 +43,3 @@ def test_response_glm_btc():
     except Exception as ex:
         print(ex)
         assert False
-

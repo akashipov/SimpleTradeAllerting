@@ -1,5 +1,6 @@
 {
   "telegram_id": "431691679",
   "ticker": "BTC/USDT",
-  "telegram_token": "2083034513:AAHg1npWs0ugdonQr4sPWj9KkUP8NDHPCRI"
+  "telegram_token": "2083034513:AAHg1npWs0ugdonQr4sPWj9KkUP8NDHPCRI",
+  "diff_size_for_send": 10
 }
