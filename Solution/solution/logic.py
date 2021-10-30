@@ -43,6 +43,7 @@ async def get_binance_orderbook(
             break
         # наверняка стоят ограничения на кол-во запросов в минуту, поэтому буду делать запросы раз в секунду
         await asyncio.sleep(1)
+    await client.close_connection()
 
 
 async def get_ftx_orderbook(
@@ -66,6 +67,9 @@ async def get_ftx_orderbook(
             await asyncio.sleep(1)
         except Exception as ex:
             log.error(ex)
+            break
+    if client._session:
+        client._session.close()
 
 
 def compare_results(
